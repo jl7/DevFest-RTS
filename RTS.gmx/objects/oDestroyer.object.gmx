@@ -30,7 +30,8 @@ target = noone;
 firing_range = 1500;
 ship_accel = 0.1;
 mass = power(10,9);
-hp = power(10,9);
+maxhp = power(10,9);
+hp = maxhp;
 time = 0;
 </string>
           </argument>
@@ -58,6 +59,7 @@ time = 0;
 if (time mod 60 == 0 &amp;&amp; instance_exists(target) &amp;&amp; target != noone &amp;&amp; target.playerID != playerID &amp;&amp; target.playerID != -1 &amp;&amp; distance_to_object(target) &lt; firing_range) {
     torp = instance_create(x,y,oTorpedo);
     torp.target = target;
+    torp.playerID = playerID; 
 }
 </string>
           </argument>

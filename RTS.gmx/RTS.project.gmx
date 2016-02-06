@@ -48,10 +48,11 @@
     <object>objects\oDestroyer</object>
     <object>objects\oTorpedo</object>
     <object>objects\oGunship</object>
+    <object>objects\oMothership</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rTesting</room>
     <room>rooms\rSingleTesting</room>
+    <room>rooms\rTesting</room>
     <room>rooms\room0</room>
   </rooms>
   <help>
