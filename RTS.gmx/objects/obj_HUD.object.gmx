@@ -66,7 +66,7 @@ var vx = view_xview[player.view];
 var vy = view_yview[player.view];
 
 draw_set_font(fDefault);
-draw_set_color(c_black);
+draw_set_color(c_white);
 //TODO: The other player will also see this HUD. Fix it!
 if(view_current == player.view){
     var drawx = vx + xoffset;

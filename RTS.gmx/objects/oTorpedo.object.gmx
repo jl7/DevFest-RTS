@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>time = 0;
+            <string>event_inherited();
+time = 0;
 hp = 8*power(10,6);
 </string>
           </argument>
@@ -79,7 +80,7 @@ image_angle = direction;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (time &gt; 30) {
+            <string>if (time &gt; 60) {
     collide1 = instance_nth_nearest(x,y,PhysicalObject,1);
     collide2 = instance_nth_nearest(x,y,PhysicalObject,2);
     collide1.hp -= 3*power(10,8);

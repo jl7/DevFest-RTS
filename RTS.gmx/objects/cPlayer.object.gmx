@@ -137,7 +137,7 @@ if(keyboard_check(hotkey_miner) &amp;&amp; osmium &gt;= 500){
     osmium -= 500;
 }
 if(keyboard_check(hotkey_destroyer) &amp;&amp; osmium &gt;= 5000){
-    show_message(string(mothership)+","+string(mothership.x)+","+string(mothership.y));
+    //show_message(string(mothership)+","+string(mothership.x)+","+string(mothership.y));
     scr_create_destroyer(mothership.x, mothership.y, id);
     osmium -= 5000;
 }

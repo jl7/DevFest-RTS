@@ -22,7 +22,7 @@ var player1;
 player1 = instance_create(0,0,cPlayer);
 player1.playerID = player1ID;
 player1.view = 0;
-mothership1 = instance_create(0,0,oMothership);
+mothership1 = instance_create(50,50,oMothership);
 mothership1.player = player1;
 mothership1.playerID = player1.playerID;
 player1.mothership = mothership1;
@@ -63,7 +63,7 @@ var HUD1 = instance_create(0,0,obj_HUD);
 var HUD2 = instance_create(0,0,obj_HUD);
 HUD1.player = player1;
 HUD2.player = player2;
-
+/*
 var shipTest1 = instance_create(50,50,  oDestroyer);
 var shipTest2 = instance_create(400,400, oFighter);
 shipTest1.player = player1;
@@ -74,7 +74,8 @@ shipTest2.playerID = player2ID;
 
 var asteroidTest1 = scr_create_asteroid(20, 40);
 var asteroidTest2 = scr_create_asteroid(40, 40, power(10, 7)*2);
-var minerTest = scr_create_miner(40, 40, player2);</code>
+var minerTest = scr_create_miner(40, 40, player2);
+*/</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -105,8 +106,8 @@ var minerTest = scr_create_miner(40, 40, player2);</code>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="-1" objName="&lt;undefined&gt;" xview="0" yview="0" wview="512" hview="768" xport="0" yport="0" wport="512" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
-    <view visible="-1" objName="&lt;undefined&gt;" xview="2687" yview="1632" wview="512" hview="768" xport="512" yport="0" wport="512" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="-1" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="1500" xport="0" yport="0" wport="512" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="-1" objName="&lt;undefined&gt;" xview="2000" yview="600" wview="1024" hview="1500" xport="512" yport="0" wport="512" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -115,7 +116,25 @@ var minerTest = scr_create_miner(40, 40, player2);</code>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="oAsteroid" x="96" y="224" name="inst_43DD3631" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oBlackHole" x="1376" y="1056" name="inst_635B11BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oAsteroid" x="704" y="608" name="inst_5A71BC31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oAsteroid" x="768" y="1024" name="inst_019A21E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oAsteroid" x="352" y="1248" name="inst_FC659029" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oAsteroid" x="704" y="1728" name="inst_3AE2DE35" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oAsteroid" x="1536" y="1888" name="inst_FBB34266" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oAsteroid" x="2336" y="1856" name="inst_83C7CAFF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oAsteroid" x="2368" y="1120" name="inst_852CFBB3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oAsteroid" x="1376" y="480" name="inst_C23FD75A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oAsteroid" x="2016" y="448" name="inst_72D5D897" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oAsteroid" x="2560" y="384" name="inst_B01817B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oAsteroid" x="2784" y="1216" name="inst_7637346C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oAsteroid" x="2880" y="1984" name="inst_A3046EAB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oAsteroid" x="1408" y="2112" name="inst_82FD5121" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oAsteroid" x="960" y="192" name="inst_90152C71" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oAsteroid" x="128" y="128" name="inst_5B0E8BAC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oAsteroid" x="160" y="2080" name="inst_A088DC55" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oAsteroid" x="2912" y="128" name="inst_D648B3C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oAsteroid" x="2400" y="1184" name="inst_DECDD31E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
