@@ -28,8 +28,8 @@
             <string>event_inherited();
 maxhp = power(10,11);
 hp = maxhp;
-firing_range = 1500;
-ship_accel = 0.1;
+firing_range = 800;
+ship_accel = 0.05;
 </string>
           </argument>
         </arguments>

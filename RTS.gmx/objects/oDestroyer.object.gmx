@@ -56,7 +56,7 @@ time = 0;
           <argument>
             <kind>1</kind>
             <string>time += 1;
-if (time mod 30 == 0 &amp;&amp; instance_exists(target) &amp;&amp; target != noone &amp;&amp; target.playerID != playerID &amp;&amp; target.playerID != -1 &amp;&amp; distance_to_object(target) &lt; firing_range) {
+if (time mod 15 == 0 &amp;&amp; instance_exists(target) &amp;&amp; target != noone &amp;&amp; target.playerID != playerID &amp;&amp; target.playerID != -1 &amp;&amp; distance_to_object(target) &lt; firing_range) {
     torp = instance_create(x+sprite_width/2,y+sprite_height/2,oTorpedo);
     torp.target = target;
     torp.playerID = playerID; 
