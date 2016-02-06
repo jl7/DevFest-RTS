@@ -48,9 +48,17 @@ var HUD2 = instance_create(0,0,obj_HUD);
 HUD1.player = player1;
 HUD2.player = player2;
 
+var shipTest1 = instance_create(50,50,  oDestroyer);
+var shipTest2 = instance_create(400,400, oFighter);
+shipTest1.player = player1;
+shipTest2.player = player2;
+shipTest1.playerID = player1ID;
+shipTest2.playerID = player2ID;
+//shipTest1.target = shipTest2;
 
-var shipTest = instance_create(0,0,  oShip);
-shipTest.playerID = player1ID;</code>
+var asteroidTest1 = scr_create_asteroid(20, 40);
+var asteroidTest2 = scr_create_asteroid(40, 40, power(10, 7)*2);
+var minerTest = scr_create_miner(40, 40, player2);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

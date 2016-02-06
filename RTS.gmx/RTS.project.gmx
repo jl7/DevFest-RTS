@@ -26,6 +26,9 @@
     <script>scripts\laserBeam.gml</script>
     <script>scripts\instance_nth_nearest.gml</script>
     <script>scripts\scr_create_asteroid.gml</script>
+    <script>scripts\scr_create_miner.gml</script>
+    <script>scripts\scr_create_fighter.gml</script>
+    <script>scripts\scr_create_destroyer.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fDefault</font>
@@ -44,6 +47,7 @@
     <object>objects\oFighter</object>
     <object>objects\oDestroyer</object>
     <object>objects\oTorpedo</object>
+    <object>objects\oGunship</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rTesting</room>

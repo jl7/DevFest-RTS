@@ -94,7 +94,7 @@ if(view_current == player.view){
           <argument>
             <kind>1</kind>
             <string>///Display Focus
-if(player.focus != noone){
+if(player.focus != noone &amp;&amp; instance_exists(player.focus)){
     if(view_current == player.view){
         draw_set_color(c_red);
         draw_rectangle( player.focus.x, 

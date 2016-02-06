@@ -34,7 +34,7 @@ if(instance_exists(oBlackHole)) {
     vspeed = sin(theta) * orbitalVelocity / pixelToMeterScale;
     hspeed = cos(theta) * orbitalVelocity / pixelToMeterScale;
 }
-maxhp = 60;
+maxhp = power(10,7);
 hp = maxhp;
 </string>
           </argument>

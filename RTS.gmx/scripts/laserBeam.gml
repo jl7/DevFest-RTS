@@ -16,8 +16,8 @@ for(var i = 0; i < max_length; i++){
         break;
     }
 }
-lx = sourceX + lengthdir_x(i+16,direction);
-ly = sourceY + lengthdir_y(i+16,direction);
+lx = sourceX + lengthdir_x(i,direction);
+ly = sourceY + lengthdir_y(i,direction);
 //show_message(string(sourceX) + "," + string(sourceY) + " - " + string(lx) + "," + string(ly));
 draw_set_color(c_red);
 draw_line_width(sourceX,sourceY,lx,ly,2);
