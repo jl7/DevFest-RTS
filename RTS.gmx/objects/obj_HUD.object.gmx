@@ -77,6 +77,36 @@ if(view_current == player.view){
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Display Focus
+if(player.focus != noone){
+    if(view_current == player.view){
+        draw_set_color(c_red);
+        draw_rectangle( player.focus.x, 
+                        player.focus.y, 
+                        player.focus.x + player.focus.sprite_width, 
+                        player.focus.y + player.focus.sprite_height, true);
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
   </events>
   <PhysicsObject>0</PhysicsObject>
