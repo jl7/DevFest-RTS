@@ -18,6 +18,9 @@
     <background>background\bgTest</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_ship_step.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\fDefault</font>
   </fonts>
@@ -29,6 +32,7 @@
     <object>objects\cPlayer</object>
     <object>objects\obj_HUD</object>
     <object>objects\oCursor</object>
+    <object>objects\oTarget</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rTesting</room>
