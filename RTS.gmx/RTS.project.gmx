@@ -21,7 +21,7 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_ship_step.gml</script>
+    <script>scripts\laserBeam.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fDefault</font>
@@ -36,6 +36,7 @@
     <object>objects\oCursor</object>
     <object>objects\oTarget</object>
     <object>objects\oShip</object>
+    <object>objects\oFighter</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rSingleTesting</room>

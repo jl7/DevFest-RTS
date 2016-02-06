@@ -11,18 +11,13 @@
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
   <code>///Initializing the game
-var player1ID; player1ID = 0;
-
-var numMice; numMice = instance_create(0,0,cManyMice);
-
-var player1;
+player1ID = 0;
+player2ID = 1;
+numMice = instance_create(0,0,cManyMice);
 
 player1 = instance_create(0,0,cPlayer);
 
 player1.playerID = player1ID;
-
-
-var cursor1;
 
 cursor1 = instance_create(0,0,oCursor);
 
@@ -32,13 +27,14 @@ cursor1.view = 0;
 cursor1.x = view_xview[player1ID];
 cursor1.y = view_yview[player1ID];
 
+shipTest1 = instance_create(0,0,  oFighter);
 
-var shipTest = instance_create(0,0,  oShip);
-
-shipTest.playerID = player1ID;
-target = instance_create(500,500,oTarget);
-shipTest.target = target;
-shipTest.travelDistance = sqrt(2*250000);</code>
+shipTest1.playerID = player1ID;
+shipTest2 = instance_create(800,600,oFighter);
+shipTest2.playerID = player2ID;
+target = shipTest2;
+shipTest1.target = target;
+//target = instance_create(500,500,oTarget);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -78,9 +74,7 @@ shipTest.travelDistance = sqrt(2*250000);</code>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
-  <instances>
-    <instance objName="oBlackHole" x="416" y="160" name="inst_A959DFFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-  </instances>
+  <instances/>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
