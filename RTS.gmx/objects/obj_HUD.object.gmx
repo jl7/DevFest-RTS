@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -34,8 +34,11 @@ xgap = 50;
 hpbar_height = 5;
 menu_xoffset = 5;
 menu_yoffset = 5;
-menu_button_width = 30; 
+menu_button_width = 60; 
 menu_button_height = 40;
+button_inner_xmargin = 8;
+button_inner_ymargin = 5;
+button_gap = 5;
 </string>
           </argument>
         </arguments>
@@ -111,7 +114,7 @@ if(player.focus != noone &amp;&amp; instance_exists(player.focus)){
         draw_set_color(c_green); 
         draw_rectangle( player.focus.x, 
                         player.focus.y + player.focus.sprite_height , 
-                        player.focus.x + player.focus.sprite_width * focus.hp/focus.maxhp, 
+                        player.focus.x + player.focus.sprite_width * player.focus.hp/player.focus.maxhp, 
                         player.focus.y + player.focus.sprite_height + hpbar_height, false);
     }
 }
@@ -136,16 +139,59 @@ if(player.focus != noone &amp;&amp; instance_exists(player.focus)){
           <argument>
             <kind>1</kind>
             <string>///Display menu
-if(player.focus != noone &amp;&amp; instance_exists(player.focus)){
-    if(view_current == player.view){
-        var vx = view_xview[view_current];
-        var vy = view_yview[view_current];
-        draw_button(vx+menu_xoffset,
-                    vy + view_hview[view_current] - menu_yoffset - menu_button_height,
-                    vx + menu_xoffset+ menu_button_width,
-                    vy + view_hview[view_current] - menu_yoffset, false);
-    }
+
+if(view_current == player.view){
+    var vx = view_xview[view_current];
+    var vy = view_yview[view_current];
+    
+    draw_set_color(c_gray);
+    
+    draw_button(vx+menu_xoffset,
+                vy + view_hview[view_current] - menu_yoffset - menu_button_height,
+                vx + menu_xoffset+ menu_button_width,
+                vy + view_hview[view_current] - menu_yoffset, 
+                !( cManyMice.button[player.playerID, 0]
+                &amp;&amp; cManyMice.xpos[player.playerID] &gt; vx+menu_xoffset
+                &amp;&amp; cManyMice.xpos[player.playerID] &lt; vx + menu_xoffset+ menu_button_width
+                &amp;&amp; cManyMice.ypos[player.playerID] &gt; vy + view_hview[view_current] - menu_yoffset - menu_button_height
+                &amp;&amp; cManyMice.ypos[player.playerID] &lt; vy + view_hview[view_current] - menu_yoffset) );
+    draw_sprite_stretched(sMiner, 0, 
+                vx+menu_xoffset+button_inner_xmargin, 
+                vy + view_hview[view_current] - menu_yoffset - menu_button_height + button_inner_ymargin, 
+                menu_button_width - 2*button_inner_xmargin, 
+                menu_button_height -2*button_inner_ymargin ); 
+    
+    draw_button(vx + menu_xoffset+ menu_button_width+button_gap,
+                vy + view_hview[view_current] - menu_yoffset - menu_button_height,
+                vx + menu_xoffset+ 2*menu_button_width+button_gap,
+                vy + view_hview[view_current] - menu_yoffset,
+                !( cManyMice.button[player.playerID, 0]
+                &amp;&amp; cManyMice.xpos[player.playerID] &gt; vx + menu_xoffset+ menu_button_width+button_gap
+                &amp;&amp; cManyMice.xpos[player.playerID] &lt; vx + menu_xoffset+ 2*menu_button_width+button_gap
+                &amp;&amp; cManyMice.ypos[player.playerID] &gt; vy + view_hview[view_current] - menu_yoffset - menu_button_height
+                &amp;&amp; cManyMice.ypos[player.playerID] &lt; vy + view_hview[view_current] - menu_yoffset) );
+    draw_sprite_stretched(sDestroyer, 0, 
+                vx + menu_xoffset+ menu_button_width+button_gap + button_inner_xmargin, 
+                vy + view_hview[view_current] - menu_yoffset - menu_button_height + button_inner_ymargin, 
+                menu_button_width - 2*button_inner_xmargin, 
+                menu_button_height -2*button_inner_ymargin ); 
+    
+    draw_button(vx + menu_xoffset+ 2*menu_button_width+2*button_gap,
+                vy + view_hview[view_current] - menu_yoffset - menu_button_height,
+                vx + menu_xoffset+ 3*menu_button_width+2*button_gap,
+                vy + view_hview[view_current] - menu_yoffset, 
+                !( cManyMice.button[player.playerID, 0]
+                &amp;&amp; cManyMice.xpos[player.playerID] &gt; vx + menu_xoffset+ 2*menu_button_width+2*button_gap
+                &amp;&amp; cManyMice.xpos[player.playerID] &lt; vx + menu_xoffset+ 3*menu_button_width+2*button_gap
+                &amp;&amp; cManyMice.ypos[player.playerID] &gt; vy + view_hview[view_current] - menu_yoffset - menu_button_height
+                &amp;&amp; cManyMice.ypos[player.playerID] &lt; vy + view_hview[view_current] - menu_yoffset) );
+    draw_sprite_stretched(sFighter, 0, 
+                vx + menu_xoffset+ 2*menu_button_width+2*button_gap + button_inner_xmargin, 
+                vy + view_hview[view_current] - menu_yoffset - menu_button_height + button_inner_ymargin, 
+                menu_button_width - 2*button_inner_xmargin, 
+                menu_button_height -2*button_inner_ymargin ); 
 }
+
 </string>
           </argument>
         </arguments>

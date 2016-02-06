@@ -15,18 +15,34 @@ var player1ID = 0;
 var player2ID = 1;
 view_xview[player1ID] = 0;
 view_yview[player1ID] = 0;
-view_xview[player2ID] = 2687;
-view_yview[player2ID] = 1632;
+view_xview[player2ID] = 1750;
+view_yview[player2ID] = 1750;
 //--------creating the players-----------
 var player1;
-var player2;
 player1 = instance_create(0,0,cPlayer);
-player2 = instance_create(0,0,cPlayer);
 player1.playerID = player1ID;
-player2.playerID = player2ID;
 player1.view = 0;
-player2.view = 1;
+mothership1 = instance_create(0,0,oMothership);
+mothership1.player = player1;
+mothership1.playerID = player1.playerID;
+player1.mothership = mothership1;
+player1.hotkey_miner = ord('Q');
+player1.hotkey_destroyer = ord('W');
+player1.hotkey_fighter = ord('E');
 
+//show_message(string(player1.hotkey_miner));
+
+var player2;
+player2 = instance_create(0,0,cPlayer);
+player2.playerID = player2ID;
+player2.view = 1;
+mothership2 = instance_create(2750,1750,oMothership);
+mothership2.player = player2;
+mothership2.playerID = player2.playerID;
+player2.mothership = mothership2;
+player2.hotkey_miner = ord('I');
+player2.hotkey_destroyer = ord('O');
+player2.hotkey_fighter = ord('P');
 //----creating the cursors-----
 
 var numMice; numMice = instance_create(0,0,cManyMice);
@@ -98,7 +114,9 @@ var minerTest = scr_create_miner(40, 40, player2);</code>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
-  <instances/>
+  <instances>
+    <instance objName="oAsteroid" x="96" y="224" name="inst_43DD3631" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+  </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

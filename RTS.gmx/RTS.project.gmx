@@ -17,6 +17,8 @@
     <sprite>sprites\sHitBox</sprite>
     <sprite>sprites\sDestroyer</sprite>
     <sprite>sprites\sTorpedo</sprite>
+    <sprite>sprites\sMiner</sprite>
+    <sprite>sprites\sFighter</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgTest</background>
@@ -49,10 +51,11 @@
     <object>objects\oTorpedo</object>
     <object>objects\oGunship</object>
     <object>objects\oMothership</object>
+    <object>objects\oMinerButton</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rSingleTesting</room>
     <room>rooms\rTesting</room>
+    <room>rooms\rSingleTesting</room>
     <room>rooms\room0</room>
   </rooms>
   <help>

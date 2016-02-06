@@ -1,0 +1,54 @@
+///Display menu
+/*
+if(view_current == player.view){
+    var vx = view_xview[view_current];
+    var vy = view_yview[view_current];
+    
+    draw_set_color(c_gray);
+    
+    draw_button(vx+menu_xoffset,
+                vy + view_hview[view_current] - menu_yoffset - menu_button_height,
+                vx + menu_xoffset+ menu_button_width,
+                vy + view_hview[view_current] - menu_yoffset, 
+                !( cManyMice.button[player.playerID, 0]
+                && cManyMice.xpos[player.playerID] > vx+menu_xoffset
+                && cManyMice.xpos[player.playerID] < vx + menu_xoffset+ menu_button_width
+                && cManyMice.ypos[player.playerID] > vy + view_hview[view_current] - menu_yoffset - menu_button_height
+                && cManyMice.ypos[player.playerID] < vy + view_hview[view_current] - menu_yoffset) );
+    draw_sprite_stretched(sMiner, 0, 
+                vx+menu_xoffset+button_inner_xmargin, 
+                vy + view_hview[view_current] - menu_yoffset - menu_button_height + button_inner_ymargin, 
+                menu_button_width - 2*button_inner_xmargin, 
+                menu_button_height -2*button_inner_ymargin ); 
+    
+    draw_button(vx + menu_xoffset+ menu_button_width+button_gap,
+                vy + view_hview[view_current] - menu_yoffset - menu_button_height,
+                vx + menu_xoffset+ 2*menu_button_width+button_gap,
+                vy + view_hview[view_current] - menu_yoffset,
+                !( cManyMice.button[player.playerID, 0]
+                && cManyMice.xpos[player.playerID] > vx + menu_xoffset+ menu_button_width+button_gap
+                && cManyMice.xpos[player.playerID] < vx + menu_xoffset+ 2*menu_button_width+button_gap
+                && cManyMice.ypos[player.playerID] > vy + view_hview[view_current] - menu_yoffset - menu_button_height
+                && cManyMice.ypos[player.playerID] < vy + view_hview[view_current] - menu_yoffset) );
+    draw_sprite_stretched(sDestroyer, 0, 
+                vx + menu_xoffset+ menu_button_width+button_gap + button_inner_xmargin, 
+                vy + view_hview[view_current] - menu_yoffset - menu_button_height + button_inner_ymargin, 
+                menu_button_width - 2*button_inner_xmargin, 
+                menu_button_height -2*button_inner_ymargin ); 
+    
+    draw_button(vx + menu_xoffset+ 2*menu_button_width+2*button_gap,
+                vy + view_hview[view_current] - menu_yoffset - menu_button_height,
+                vx + menu_xoffset+ 3*menu_button_width+2*button_gap,
+                vy + view_hview[view_current] - menu_yoffset, 
+                !( cManyMice.button[player.playerID, 0]
+                && cManyMice.xpos[player.playerID] > vx + menu_xoffset+ 2*menu_button_width+2*button_gap
+                && cManyMice.xpos[player.playerID] < vx + menu_xoffset+ 3*menu_button_width+2*button_gap
+                && cManyMice.ypos[player.playerID] > vy + view_hview[view_current] - menu_yoffset - menu_button_height
+                && cManyMice.ypos[player.playerID] < vy + view_hview[view_current] - menu_yoffset) );
+    draw_sprite_stretched(sFighter, 0, 
+                vx + menu_xoffset+ 2*menu_button_width+2*button_gap + button_inner_xmargin, 
+                vy + view_hview[view_current] - menu_yoffset - menu_button_height + button_inner_ymargin, 
+                menu_button_width - 2*button_inner_xmargin, 
+                menu_button_height -2*button_inner_ymargin ); 
+}
+*/

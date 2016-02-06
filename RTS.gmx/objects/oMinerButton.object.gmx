@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1001</depth>
+  <depth>-1000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,9 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Initialize
-//player;
-
+            <string>///Initialization
+//player
+//object
+//index
+menu_xoffset = 5;
+menu_yoffset = 5;
+menu_button_width = 60; 
+menu_button_height = 40;
+button_inner_xmargin = 8;
+button_inner_ymargin = 5;
+button_gap = 5;
 </string>
           </argument>
         </arguments>
@@ -50,22 +58,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Update
-x = cManyMice.xpos[player.playerID];
-y = cManyMice.ypos[player.playerID];
+            <string>///Set the location
 
-var view = player.view;
+var vx = view_xview[player.view];
+var vy = view_yview[player.view];
 
-if(x &lt; view_xview[view]) view_xview[view] = x;
-if(x &gt; view_xview[view] + view_wview[view]) view_xview[view] = x-view_wview[view];
-if(y &lt; view_yview[view]) view_yview[view] = y;
-if(y &gt; view_yview[view] + view_hview[view]) view_yview[view] = y-view_hview[view];
+x = vx + menu_xoffset+ index * menu_button_width + index*button_gap;
+y = vy + view_hview[player.view] - menu_yoffset - menu_button_height;
+
 </string>
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -82,9 +86,17 @@ if(y &gt; view_yview[view] + view_hview[view]) view_yview[view] = y-view_hview[v
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw the sprite
-if(view_current == player.view){
-    draw_sprite(sCursor,0, x, y);
+            <string>///Check clicking
+var vx = view_xview[player.view];
+var vy = view_yview[player.view];
+if(
+cManyMice.button[player.playerID, 0]
+&amp;&amp; cManyMice.xpos[player.playerID] &gt; vx + menu_xoffset+ index*menu_button_width+index*button_gap
+&amp;&amp; cManyMice.xpos[player.playerID] &lt; vx + menu_xoffset+ (index+1)*menu_button_width+ index * button_gap
+&amp;&amp; cManyMice.ypos[player.playerID] &gt; vy + view_hview[player.view] - menu_yoffset - menu_button_height
+&amp;&amp; cManyMice.ypos[player.playerID] &lt; vy + view_hview[player.view] - menu_yoffset){
+    ///create the coresponding ship
+    
 }
 </string>
           </argument>
