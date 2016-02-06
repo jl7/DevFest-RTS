@@ -15,13 +15,16 @@
     <sprite>sprites\sCursor</sprite>
     <sprite>sprites\sShip</sprite>
     <sprite>sprites\sHitBox</sprite>
+    <sprite>sprites\sDestroyer</sprite>
+    <sprite>sprites\sTorpedo</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgTest</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_ship_step.gml</script>
+    <script>scripts\laserBeam.gml</script>
+    <script>scripts\instance_nth_nearest.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fDefault</font>
@@ -37,6 +40,9 @@
     <object>objects\oTarget</object>
     <object>objects\oShip</object>
     <object>objects\oMiner</object>
+    <object>objects\oFighter</object>
+    <object>objects\oDestroyer</object>
+    <object>objects\oTorpedo</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rTesting</room>

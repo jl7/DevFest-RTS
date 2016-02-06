@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
+playerID = 10;
 mass = power(10,8);
 if(instance_exists(oBlackHole)) {
     orbitalVelocity = sqrt(G * (oBlackHole.mass + mass) / (distance_to_object(oBlackHole)*pixelToMeterScale));
