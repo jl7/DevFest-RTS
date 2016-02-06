@@ -106,6 +106,7 @@ else { // stop moving if target died
     }
 }
 
+image_angle = direction;
 </string>
           </argument>
         </arguments>

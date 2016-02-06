@@ -38,8 +38,8 @@ cursor1.player = player1;
 cursor2.player = player2;
 
 cursor1.x = view_xview[player1ID];
-var shipTest1 = instance_create(50,50,  oDestroyer);
-var shipTest2 = instance_create(400,400, oFighter);
+var shipTest1 = instance_create(150,150,  oDestroyer);
+var shipTest2 = instance_create(700,700, oFighter);
 shipTest1.playerID = player1ID;
 shipTest2.playerID = player2ID;
 shipTest1.target = shipTest2;</code>
