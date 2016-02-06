@@ -25,7 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>///Display resources
+var vx; vx = view_xview[player.playerID];
+var vy; vy = view_yview[player.playerID];
+draw_set_font(fDefault);
+//TODO: The other player will also see this HUD. Fix it!
+draw_sprite(sOsmium, 0, 11+vx, 3+vy);
+draw_text(21+vx, 5+vy, string(player.osmium));
+
+draw_sprite(sScience, 0, 30+vx, 3+vy);
+draw_text(46+vx, 5+vy, string(player.science));
+</string>
           </argument>
         </arguments>
       </action>

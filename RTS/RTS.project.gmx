@@ -10,9 +10,14 @@
   <sprites name="sprites">
     <sprite>sprites\sBlackHole</sprite>
     <sprite>sprites\sAsteroid</sprite>
+    <sprite>sprites\sOsmium</sprite>
+    <sprite>sprites\sScience</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\fDefault</font>
+  </fonts>
   <objects name="objects">
     <object>objects\oAsteroid</object>
     <object>objects\PhysicalObject</object>
