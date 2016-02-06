@@ -32,6 +32,7 @@ target = noone;
 range = 100;
 ship_accel = 2;
 travelDistance = 0;
+mass = power(10,8);
 </string>
           </argument>
         </arguments>
@@ -56,13 +57,23 @@ travelDistance = 0;
             <kind>1</kind>
             <string>///update
 
+Kp = 0.00001;
+Kd = -0.0001;
 
 if (target != noone) {
     if (target.playerID != -1 &amp;&amp; target.playerID != playerID &amp;&amp; distance_to_object(target) &lt; firing_range) { //enemy ship and within range
         // fire at target
     }
     else { // move towards target        
-        if (distance_to_object(target) &gt; travelDistance / 2) {
+        ax = Kp * (target.x-x) + Kd * hspeed;
+        ay = Kp * (target.y-y) + Kd * vspeed;
+        magn_accel = sqrt(ax*ax+ay*ay);
+        theta = arctan2(ay,ax);
+        ax = cos(theta)*max(magn_accel,ship_accel);
+        ay = sin(theta)*max(magn_accel,ship_accel);
+        hspeed += ax;
+        vspeed += ay;
+        /*if (distance_to_object(target) &gt; travelDistance / 2) {
             motion_add(point_direction(x,y,target.x,target.y),ship_accel);
         }
         else {
@@ -70,12 +81,11 @@ if (target != noone) {
             if (position_meeting(x,y,target)) {
                 with (target){instance_destroy();}
             }
-        }
+        }*/
     }
 }
 
 //affected by gravity
-
 </string>
           </argument>
         </arguments>

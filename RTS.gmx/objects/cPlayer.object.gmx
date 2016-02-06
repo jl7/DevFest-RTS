@@ -64,11 +64,9 @@ if (cManyMice.button[playerID,0]) {
     else {
         focus = noone;
     }
-    show_message("focus = " + string(focus));
 }
 
 if (cManyMice.button[playerID,1]) {
-    show_message("Right clicked");
     if (focus != noone) {
         if (click != noone) {
             focus.target = click;

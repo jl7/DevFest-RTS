@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>mass = power(10,31);
+            <string>mass = power(10,36);
 </string>
           </argument>
         </arguments>
