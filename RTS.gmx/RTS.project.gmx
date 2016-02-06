@@ -22,6 +22,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_ship_step.gml</script>
+    <script>scripts\scr_create_asteroid.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fDefault</font>
