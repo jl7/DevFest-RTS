@@ -11,30 +11,43 @@
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
   <code>///Initializing the game
-var player1ID; player1ID = 0;
-var player2ID; player2ID = 1;
-
-var numMice; numMice = instance_create(0,0,cManyMice);
-
+var player1ID = 0;
+var player2ID = 1;
+view_xview[player1ID] = 0;
+view_yview[player1ID] = 0;
+view_xview[player2ID] = 2687;
+view_yview[player2ID] = 1632;
+//--------creating the players-----------
 var player1;
 var player2;
 player1 = instance_create(0,0,cPlayer);
 player2 = instance_create(0,0,cPlayer);
 player1.playerID = player1ID;
 player2.playerID = player2ID;
+player1.view = 0;
+player2.view = 1;
 
+//----creating the cursors-----
+
+var numMice; numMice = instance_create(0,0,cManyMice);
 var cursor1;
 var cursor2;
 cursor1 = instance_create(0,0,oCursor);
 cursor2 = instance_create(0,0,oCursor);
 cursor1.player = player1;
 cursor2.player = player2;
-cursor1.view = 0;
-cursor2.view = 1;
+
 cursor1.x = view_xview[player1ID];
 cursor1.y = view_yview[player1ID];
 cursor2.x = view_xview[player2ID];
 cursor2.y = view_yview[player2ID];
+
+//----Creating the HUDs---------
+var HUD1 = instance_create(0,0,obj_HUD);
+var HUD2 = instance_create(0,0,obj_HUD);
+HUD1.player = player1;
+HUD2.player = player2;
+
 
 var shipTest = instance_create(0,0,  oShip);
 shipTest.playerID = player1ID;</code>

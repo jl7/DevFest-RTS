@@ -2,12 +2,41 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
+  <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Initilization
+//player
+xoffset = 11;
+yoffset = 11;
+xsmallgap = 11;
+xgap = 50;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -26,15 +55,24 @@
           <argument>
             <kind>1</kind>
             <string>///Display resources
-var vx; vx = view_xview[player.playerID];
-var vy; vy = view_yview[player.playerID];
-draw_set_font(fDefault);
-//TODO: The other player will also see this HUD. Fix it!
-draw_sprite(sOsmium, 0, 11+vx, 3+vy);
-draw_text(21+vx, 5+vy, string(player.osmium));
+var vx = view_xview[player.view];
+var vy = view_yview[player.view];
 
-draw_sprite(sScience, 0, 30+vx, 3+vy);
-draw_text(46+vx, 5+vy, string(player.science));
+draw_set_font(fDefault);
+draw_set_color(c_black);
+//TODO: The other player will also see this HUD. Fix it!
+if(view_current == player.view){
+    var drawx = vx + xoffset;
+    var drawy = vy + yoffset;
+    draw_sprite(sOsmium, 0, drawx, drawy);
+    drawx += 32 + xsmallgap;
+    draw_text(drawx, drawy, string(player.osmium));
+    
+    drawx += xgap;
+    draw_sprite(sScience, 0, drawx, drawy);
+    drawx += 32 + xsmallgap;
+    draw_text(drawx, drawy, string(player.science));
+}
 </string>
           </argument>
         </arguments>

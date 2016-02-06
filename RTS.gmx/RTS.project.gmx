@@ -38,8 +38,8 @@
     <object>objects\oShip</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rSingleTesting</room>
     <room>rooms\rTesting</room>
+    <room>rooms\rSingleTesting</room>
     <room>rooms\room0</room>
   </rooms>
   <help>
