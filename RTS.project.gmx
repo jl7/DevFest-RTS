@@ -18,6 +18,8 @@
     <object>objects\PhysicalObject</object>
     <object>objects\oBlackHole</object>
     <object>objects\cManyMice</object>
+    <object>objects\cPlayer</object>
+    <object>objects\obj_HUD</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
