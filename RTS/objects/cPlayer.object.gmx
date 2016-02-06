@@ -30,6 +30,7 @@ var focus;
 var playerID;
 var osmium;
 var science;
+var cursor;
 </string>
           </argument>
         </arguments>
