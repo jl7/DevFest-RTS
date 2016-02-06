@@ -12,6 +12,7 @@
     <sprite>sprites\sAsteroid</sprite>
     <sprite>sprites\sOsmium</sprite>
     <sprite>sprites\sScience</sprite>
+    <sprite>sprites\sShip</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -23,9 +24,9 @@
     <object>objects\PhysicalObject</object>
     <object>objects\oBlackHole</object>
     <object>objects\cManyMice</object>
+    <object>objects\oShip</object>
     <object>objects\cPlayer</object>
     <object>objects\obj_HUD</object>
-    <object>objects\oShip</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
