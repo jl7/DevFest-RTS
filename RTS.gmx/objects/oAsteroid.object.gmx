@@ -27,10 +27,13 @@
             <kind>1</kind>
             <string>event_inherited();
 mass = power(10,8);
-orbitalVelocity = sqrt(G * (oBlackHole.mass + mass) / (distance_to_object(oBlackHole)*pixelToMeterScale));
-theta = 3.14159/2 + arctan2(oBlackHole.y-y,oBlackHole.x-x);
-vspeed = sin(theta) * orbitalVelocity / pixelToMeterScale;
-hspeed = cos(theta) * orbitalVelocity / pixelToMeterScale;
+if(instance_exists(oBlackHole)) {
+    orbitalVelocity = sqrt(G * (oBlackHole.mass + mass) / (distance_to_object(oBlackHole)*pixelToMeterScale));
+    theta = 3.14159/2 + arctan2(oBlackHole.y-y,oBlackHole.x-x);
+    vspeed = sin(theta) * orbitalVelocity / pixelToMeterScale;
+    hspeed = cos(theta) * orbitalVelocity / pixelToMeterScale;
+}
+hp = mass;
 </string>
           </argument>
         </arguments>

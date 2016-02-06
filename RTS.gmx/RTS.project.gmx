@@ -36,6 +36,7 @@
     <object>objects\oCursor</object>
     <object>objects\oTarget</object>
     <object>objects\oShip</object>
+    <object>objects\oMiner</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rSingleTesting</room>
