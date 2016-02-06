@@ -25,6 +25,7 @@
     <object>objects\cManyMice</object>
     <object>objects\cPlayer</object>
     <object>objects\obj_HUD</object>
+    <object>objects\oShip</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
