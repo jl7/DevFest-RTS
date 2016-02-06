@@ -1,3 +1,6 @@
+var this; this = argument[0];
+var target; target = argument[1];
+
 if (instance_exists(target)) {
     if (target.playerID != -1 && target.playerID != playerID && distance_to_object(target) < firing_range) { //enemy ship and within range
         // fire at target

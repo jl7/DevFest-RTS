@@ -13,6 +13,7 @@
     <sprite>sprites\sOsmium</sprite>
     <sprite>sprites\sScience</sprite>
     <sprite>sprites\sCursor</sprite>
+    <sprite>sprites\sShip</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgTest</background>
@@ -33,8 +34,10 @@
     <object>objects\obj_HUD</object>
     <object>objects\oCursor</object>
     <object>objects\oTarget</object>
+    <object>objects\oShip</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rSingleTesting</room>
     <room>rooms\rTesting</room>
     <room>rooms\room0</room>
   </rooms>

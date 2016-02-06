@@ -49,10 +49,12 @@ pixelToMeterScale = power(10,9) / 100;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>accel = G * oBlackHole.mass / sqr( distance_to_object(oBlackHole) * pixelToMeterScale);
-theta = arctan2(oBlackHole.y-y,oBlackHole.x-x);
-vspeed += sin(theta)*accel/pixelToMeterScale;
-hspeed += cos(theta)*accel/pixelToMeterScale;
+            <string>if (instance_exists(oBlackHole)) {
+    accel = G * oBlackHole.mass / sqr( distance_to_object(oBlackHole) * pixelToMeterScale);
+    theta = arctan2(oBlackHole.y-y,oBlackHole.x-x);
+    vspeed += sin(theta)*accel/pixelToMeterScale;
+    hspeed += cos(theta)*accel/pixelToMeterScale;
+}
 </string>
           </argument>
         </arguments>
