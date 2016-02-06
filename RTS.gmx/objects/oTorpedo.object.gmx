@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>PhysicalObject</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -26,6 +26,30 @@
           <argument>
             <kind>1</kind>
             <string>time = 0;
+hp = power(10,6);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (hp &lt;= 0) {instance_destroy();}
 </string>
           </argument>
         </arguments>
@@ -48,7 +72,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>max_accel = 0.2;
+            <string>event_inherited();
+max_accel = 0.2;
 if (instance_exists(target) &amp;&amp; target != noone) {
     theta = arctan2(target.y-y,target.x-x);
     hspeed += max_accel*cos(theta);
