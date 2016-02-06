@@ -27,6 +27,7 @@
     <object>objects\oShip</object>
     <object>objects\cPlayer</object>
     <object>objects\obj_HUD</object>
+    <object>objects\oSmallShip</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
