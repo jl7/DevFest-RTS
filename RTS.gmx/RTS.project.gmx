@@ -29,6 +29,7 @@
     <object>objects\cPlayer</object>
     <object>objects\obj_HUD</object>
     <object>objects\oCursor</object>
+    <object>objects\oSmallShip</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rTesting</room>
