@@ -13,10 +13,12 @@
     <sprite>sprites\sOsmium</sprite>
     <sprite>sprites\sScience</sprite>
     <sprite>sprites\sCursor</sprite>
-    <sprite>sprites\sShip</sprite>
+    <sprite>sprites\sFighter</sprite>
     <sprite>sprites\sHitBox</sprite>
     <sprite>sprites\sDestroyer</sprite>
     <sprite>sprites\sTorpedo</sprite>
+    <sprite>sprites\sMiner</sprite>
+    <sprite>sprites\sMothership</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgTest</background>
