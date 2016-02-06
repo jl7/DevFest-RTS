@@ -27,7 +27,7 @@ cursor1.view = 0;
 cursor1.x = view_xview[player1ID];
 cursor1.y = view_yview[player1ID];
 
-shipTest1 = instance_create(0,0,  oFighter);
+shipTest1 = instance_create(50,50,  oDestroyer);
 
 shipTest1.playerID = player1ID;
 shipTest2 = instance_create(800,600,oFighter);
