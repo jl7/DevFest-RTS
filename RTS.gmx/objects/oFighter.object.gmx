@@ -32,7 +32,8 @@ target = noone;
 firing_range = 300;
 ship_accel = 0.2;
 mass = power(10,8);
-hp = power(10,7);
+maxhp = power(10,7);
+hp = maxhp;
 </string>
           </argument>
         </arguments>
@@ -57,6 +58,23 @@ hp = power(10,7);
             <kind>1</kind>
             <string>if (instance_exists(target) &amp;&amp; target != noone &amp;&amp; target.playerID != playerID &amp;&amp; target.playerID != -1 &amp;&amp; distance_to_object(target) &lt; firing_range) {
     laserBeam(target.x+target.sprite_width/2,target.y+target.sprite_height/2,x+sprite_width/2,y+sprite_height/2,power(10,5),id);    
+}
+else {
+    var i;
+    for (i=0; i&lt;instance_number(oTorpedo); i+=1) {
+        var torp = instance_find(oTorpedo,i);
+        if (torp.playerID != playerID &amp;&amp; distance_to_object(torp) &lt; firing_range) {
+            laserBeam(torp.x+torp.sprite_width/2,torp.y+torp.sprite_height/2,x+sprite_width/2,y+sprite_height/2,power(10,5),id);
+            return noone;
+        }
+    }
+    for (i=0; i&lt;instance_number(oShip); i+=1) {
+        var torp = instance_find(oShip,i);
+        if (torp.playerID != playerID &amp;&amp; distance_to_object(torp) &lt; firing_range) {
+            laserBeam(torp.x+torp.sprite_width/2,torp.y+torp.sprite_height/2,x+sprite_width/2,y+sprite_height/2,power(10,5),id);
+            return noone;
+        }
+    }
 }
 </string>
           </argument>

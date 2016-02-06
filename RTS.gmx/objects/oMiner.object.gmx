@@ -27,7 +27,8 @@
             <kind>1</kind>
             <string>event_inherited();
 firing_range = 0;
-hp = power(10,7);
+maxhp = power(10,7);
+hp = maxhp;
 </string>
           </argument>
         </arguments>
