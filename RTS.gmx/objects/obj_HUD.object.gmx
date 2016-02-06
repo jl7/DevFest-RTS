@@ -31,7 +31,11 @@ xoffset = 11;
 yoffset = 11;
 xsmallgap = 11;
 xgap = 50;
-
+hpbar_height = 5;
+menu_xoffset = 5;
+menu_yoffset = 5;
+menu_button_width = 30; 
+menu_button_height = 40;
 </string>
           </argument>
         </arguments>
@@ -101,6 +105,45 @@ if(player.focus != noone &amp;&amp; instance_exists(player.focus)){
                         player.focus.y, 
                         player.focus.x + player.focus.sprite_width, 
                         player.focus.y + player.focus.sprite_height, true);
+        
+        //Display the hp of the focused unit. For now it always assumes that the 
+        //unit has hp
+        draw_set_color(c_green); 
+        draw_rectangle( player.focus.x, 
+                        player.focus.y + player.focus.sprite_height , 
+                        player.focus.x + player.focus.sprite_width * focus.hp/focus.maxhp, 
+                        player.focus.y + player.focus.sprite_height + hpbar_height, false);
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Display menu
+if(player.focus != noone &amp;&amp; instance_exists(player.focus)){
+    if(view_current == player.view){
+        var vx = view_xview[view_current];
+        var vy = view_yview[view_current];
+        draw_button(vx+menu_xoffset,
+                    vy + view_hview[view_current] - menu_yoffset - menu_button_height,
+                    vx + menu_xoffset+ menu_button_width,
+                    vy + view_hview[view_current] - menu_yoffset, false);
     }
 }
 </string>
